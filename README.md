@@ -70,10 +70,9 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 ---
 
 ## 📊 GitHub Stats
-!GitHub Streak
 
 <div align="center">
-!Your GitHub stats
+!Your GitHub stats (https://github-readme-stats.vercel.app/api?username=zeondev19)
 !Top Langs
 !GitHub Streak
 !trophy
