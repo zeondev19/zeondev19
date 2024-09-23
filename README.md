@@ -72,12 +72,15 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 ## 📊 Stats
 
 <div align="center">
-!Your GitHub stats
-!Top Langs
-!GitHub Streak
-!trophy
-!GitHub Activity Graph
+![Bintang's GitHub stats](https://github-readme-stats.vercel.app/api?username=zeondev19&show_icons=true&theme=tokyonight)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 </div>
+
+---
+
+## ✨ Contributions
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=your-username&theme=tokyonight)
 
 ---
 
