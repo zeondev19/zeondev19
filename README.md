@@ -69,11 +69,10 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 
 ---
 
-## 📊 GitHub Stats
+## 📊 Stats
 
 <div align="center">
-![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=zeondev19)
-
+!Your GitHub stats
 !Top Langs
 !GitHub Streak
 !trophy
