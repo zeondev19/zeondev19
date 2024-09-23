@@ -91,7 +91,15 @@ Got a project in mind? Let's collaborate and build something amazing together!
 
 <div align="center">
 
-### "Code is poetry."
+```php
+while(alive) {
+    learn();
+    code();
+    innovate();
+    repeat();
+}
+```
+
 
 ⭐️ From [Tengku Bintang Zaky Irmaysa](https://github.com/zeondev19)
 
