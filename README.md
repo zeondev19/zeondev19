@@ -83,7 +83,9 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 ---
 
 ## ✨ Contributions
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=zeondev19&theme=tokyonight)
+<div align="center">
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=zeondev19&theme=tokyonight)  
+</div>
 
 ---
 
