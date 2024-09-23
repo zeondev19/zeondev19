@@ -78,7 +78,8 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 
-![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=zeondev19)
+![Trophies](https://github-profile-trophy.vercel.app/?username=zeondev19&theme=onedark)
+
 
 
 </div>
