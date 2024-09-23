@@ -7,7 +7,7 @@
   <a href="#-skills">Skills</a> •
   <a href="#-projects">Projects</a> •
   <a href="#-stats">Stats</a> •
-  <a href="#-contributions">Stats</a> •
+  <a href="#-contributions">Contributions</a> •
   <a href="#-contact">Contact</a>
 </p>
 
