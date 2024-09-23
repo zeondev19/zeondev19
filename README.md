@@ -73,8 +73,10 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 ## 📊 Stats
 
 <div align="center">
-![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=zeondev19&show_icons=true&theme=radical&cache_seconds=86400)
 
+![Statistik GitHub](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=zeondev19&show_icons=true&theme=radical)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 
 </div>
 
