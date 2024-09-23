@@ -20,7 +20,7 @@ Laravel  |  PHP  |  JavaScript  |  Vue.js  |  MySQL  |  Redis  |  Docker
 ```
 ### 📈 GitHub Stats
 
-![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=zeondev19_anda&show_icons=true&theme=radical)
+![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=zeondev19&show_icons=true&theme=radical)
 
 ### 🌐 Temukan Saya di Web
 
