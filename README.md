@@ -70,6 +70,7 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 ---
 
 ## 📊 GitHub Stats
+!GitHub Streak
 
 <div align="center">
 !Your GitHub stats
