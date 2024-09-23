@@ -91,6 +91,8 @@ Got a project in mind? Let's collaborate and build something amazing together!
 
 <div align="center">
 
+### "Code is Game."
+
 ```php
 while(alive) {
     learn();
