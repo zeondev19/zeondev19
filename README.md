@@ -69,10 +69,14 @@ I specialize in Laravel and PHP, with a strong foundation in JavaScript. My goal
 
 ---
 
-## 📊 Stats
+## 📊 GitHub Stats
 
 <div align="center">
-  <img src="/api/placeholder/495/195" alt="GitHub Stats" />
+!Your GitHub stats
+!Top Langs
+!GitHub Streak
+!trophy
+!GitHub Activity Graph
 </div>
 
 ---
