@@ -82,13 +82,11 @@ I’m a passionate Full Stack Developer specializing in Laravel and PHP, with st
 
 <div align="center">
 
-![Statistik GitHub](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=zeondev19&show_icons=true&theme=radical)
+![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=zeondev19&show_icons=true&count_private=true&theme=radical)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=zeondev19&theme=onedark)
-
-
+![Trophies](https://github-profile-trophy.vercel.app/?username=zeondev19&theme=onedark&count_private=true)
 
 </div>
 
