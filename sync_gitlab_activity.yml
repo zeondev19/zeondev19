@@ -1,0 +1,44 @@
+name: Sync GitLab Contributions
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Jalankan setiap hari pada pukul 00:00 UTC
+  workflow_dispatch: # Memungkinkan menjalankan secara manual
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl
+
+      - name: Fetch GitLab Contributions
+        env:
+          GITLAB_PRIVATE_TOKEN: ${{ secrets.GITLAB_PRIVATE_TOKEN }}
+          GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
+        run: |
+          echo "Fetching GitLab contributions for user $GITLAB_USERNAME..."
+
+          # Panggil API GitLab dan simpan ke file JSON
+          curl --header "PRIVATE-TOKEN: $GITLAB_PRIVATE_TOKEN" \
+            "https://gitlab.com/api/v4/users/$GITLAB_USERNAME/events" > gitlab_contributions.json
+
+          echo "GitLab contributions successfully fetched."
+          echo "Output saved to gitlab_contributions.json."
+
+      - name: Process Contributions
+        run: |
+          echo "Processing contributions..."
+          # Parsing file JSON jika diperlukan
+          cat gitlab_contributions.json | jq '.[] | {action_name, target_title, created_at}'
+
+      - name: Upload Processed Activity to README
+        run: |
+          echo "Integrating contributions into README..."
+          # Tambahkan logika untuk mengintegrasikan data ke README.md
