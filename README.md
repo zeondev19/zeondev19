@@ -86,7 +86,7 @@ I’m a passionate Full Stack Developer specializing in Laravel and PHP, with st
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=zeondev19&theme=onedark&count_private=true)
+![Trophies](https://github-profile-trophy.vercel.app/?username=zeondev19&theme=onedark&count_private=true&cache_seconds=3600)
 
 </div>
 
