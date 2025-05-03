@@ -100,6 +100,11 @@ I’m a passionate Full Stack Developer specializing in Laravel and PHP, with st
 
 </div>
 
+---
+
+---
+
+[![GitLab](https://img.shields.io/badge/GitLab-Profile-orange?style=for-the-badge&logo=gitlab)](https://gitlab.com/zeondev19)
 
 ---
 
