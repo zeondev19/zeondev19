@@ -105,6 +105,9 @@ I’m a passionate Full Stack Developer specializing in Laravel and PHP, with st
 GitLab commits 30 hari terakhir: 
 
 ---
+## 📈 GitLab Commit Activity (30 Hari Terakhir)
+![GitLab Commit Graph](./gitlab-commit-graph.png)
+---
 
 [![GitLab](https://img.shields.io/badge/GitLab-Profile-orange?style=for-the-badge&logo=gitlab)](https://gitlab.com/zeondev19)
 
