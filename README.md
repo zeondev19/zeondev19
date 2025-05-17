@@ -97,6 +97,7 @@ I’m a passionate Full Stack Developer specializing in Laravel and PHP, with st
 
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=zeondev19&theme=tokyonight&cache_seconds=86400)
 
+![GitLab Contribution Graph](https://raw.githubusercontent.com/zeondev19/zeondev19/main/gitlab-contributions.png)
 
 </div>
 
