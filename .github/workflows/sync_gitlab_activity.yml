@@ -1,44 +1,44 @@
-name: Sync GitLab Contributions
+name: Update GitLab Commit Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Jalankan setiap hari pada pukul 00:00 UTC
-  workflow_dispatch: # Memungkinkan menjalankan secara manual
+    - cron: "0 0 * * *"   # Setiap hari jam 00:00 UTC
+  workflow_dispatch:       # Bisa dijalankan manual
 
 jobs:
-  sync:
+  gitlab_commits:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Install Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq curl
-
-      - name: Fetch GitLab Contributions
+      - name: Ambil data commit GitLab (30 hari terakhir)
         env:
-          GITLAB_PRIVATE_TOKEN: ${{ secrets.GITLAB_PRIVATE_TOKEN }}
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
           GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
         run: |
-          echo "Fetching GitLab contributions for user $GITLAB_USERNAME..."
+          curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+            "https://gitlab.com/api/v4/users/$GITLAB_USERNAME/events?action=pushed" > gitlab_events.json
 
-          # Panggil API GitLab dan simpan ke file JSON
-          curl --header "PRIVATE-TOKEN: $GITLAB_PRIVATE_TOKEN" \
-            "https://gitlab.com/api/v4/users/$GITLAB_USERNAME/events" > gitlab_contributions.json
+          # Hitung jumlah commit 30 hari terakhir
+          COMMITS=$(jq '[.[] | select(.created_at >= "'$(date -d '30 days ago' --utc +%Y-%m-%d)'") ] | length' gitlab_events.json)
+          echo "Total commit 30 hari terakhir di GitLab: $COMMITS"
+          echo $COMMITS > gitlab_commit_count.txt
 
-          echo "GitLab contributions successfully fetched."
-          echo "Output saved to gitlab_contributions.json."
-
-      - name: Process Contributions
+      - name: Update README.md
         run: |
-          echo "Processing contributions..."
-          # Parsing file JSON jika diperlukan
-          cat gitlab_contributions.json | jq '.[] | {action_name, target_title, created_at}'
+          COUNT=$(cat gitlab_commit_count.txt)
+          # Ganti atau tambahkan baris khusus di README
+          if grep -q "GitLab commits 30 hari terakhir:" README.md; then
+            sed -i "s/GitLab commits 30 hari terakhir:.*/GitLab commits 30 hari terakhir: $COUNT/g" README.md
+          else
+            echo "GitLab commits 30 hari terakhir: $COUNT" >> README.md
+          fi
 
-      - name: Upload Processed Activity to README
+      - name: Commit & Push Perubahan
         run: |
-          echo "Integrating contributions into README..."
-          # Tambahkan logika untuk mengintegrasikan data ke README.md
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update GitLab commit stats [skip ci]" || exit 0
+          git push
