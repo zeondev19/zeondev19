@@ -17,7 +17,7 @@ jobs:
           sudo apt-get install -y python3-pip
           pip install matplotlib requests python-dateutil
 
-      - name: Ambil data commit GitLab
+      - name: Ambil data commit GitLab & buat grafik area
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
           GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
@@ -76,21 +76,26 @@ jobs:
           days = [days_ago.date() + timedelta(days=i) for i in range(30)]
           counts = [commits_per_day.get(day, 0) for day in days]
 
-          # Buat grafik
-          plt.figure(figsize=(8,2))
-          plt.bar(days, counts, color="#fca326")
+          # Area chart yang menarik
+          plt.figure(figsize=(9, 3))
+          plt.fill_between(days, counts, color='#fca326', alpha=0.4)
+          plt.plot(days, counts, marker='o', color='#fca326', linewidth=2)
           plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
-          plt.xticks(rotation=45, fontsize=7)
-          plt.yticks(fontsize=7)
-          plt.title("GitLab Commit 30 Hari Terakhir", fontsize=9)
+          plt.xticks(rotation=45, fontsize=8)
+          plt.yticks(fontsize=8)
+          plt.title("GitLab Commit Activity (Last 30 Days)", fontsize=11, weight='bold')
+          plt.grid(axis='y', linestyle='--', linewidth=0.5, alpha=0.7)
+          plt.xlabel("Date", fontsize=9)
+          plt.ylabel("Commits", fontsize=9)
           plt.tight_layout()
           plt.savefig("gitlab-commit-graph.png")
           EOF
 
-      - name: Commit & Push graph
+      - name: Remove old graph and push new one
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -f gitlab-commit-graph.png || true
           git add gitlab-commit-graph.png
           git commit -m "update: GitLab commit graph [skip ci]" || exit 0
           git push
