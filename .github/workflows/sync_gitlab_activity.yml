@@ -1,29 +1,66 @@
-name: Update GitLab Commit Stats
+name: Sync GitLab Activity
 
 on:
   schedule:
     - cron: "0 0 * * *"   # Setiap hari jam 00:00 UTC
-  workflow_dispatch:       # Bisa dijalankan manual
+  workflow_dispatch:
 
 jobs:
-  gitlab_commits:
+  sync_gitlab_activity:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Ambil data commit GitLab (30 hari terakhir)
+      - name: Ambil data event push GitLab (100 event terakhir)
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
           GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
         run: |
           curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-            "https://gitlab.com/api/v4/users/$GITLAB_USERNAME/events?action=pushed" > gitlab_events.json
+            "https://gitlab.com/api/v4/users/$GITLAB_USERNAME/events?action=pushed&per_page=100" > gitlab_events.json
 
-          # Hitung jumlah commit 30 hari terakhir
-          COMMITS=$(jq '[.[] | select(.created_at >= "'$(date -d '30 days ago' --utc +%Y-%m-%d)'") ] | length' gitlab_events.json)
-          echo "Total commit 30 hari terakhir di GitLab: $COMMITS"
-          echo $COMMITS > gitlab_commit_count.txt
+      - name: Hitung & visualisasi commit 30 hari terakhir
+        run: |
+          pip install matplotlib python-dateutil
+          python3 <<EOF
+          import json
+          from collections import Counter
+          from datetime import datetime, timedelta
+          import matplotlib.pyplot as plt
+          import matplotlib.dates as mdates
+          from dateutil import parser
+
+          with open('gitlab_events.json') as f:
+              events = json.load(f)
+
+          today = datetime.utcnow()
+          days_ago = today - timedelta(days=29)
+          commits_per_day = Counter()
+
+          for event in events:
+              if 'created_at' in event:
+                  dt = parser.isoparse(event['created_at'])
+                  if dt.date() >= days_ago.date():
+                      commits_per_day[dt.date()] += 1
+
+          days = [days_ago.date() + timedelta(days=i) for i in range(30)]
+          counts = [commits_per_day.get(day, 0) for day in days]
+          total_commit = sum(counts)
+          print("Total commit 30 hari terakhir di GitLab:", total_commit)
+          with open("gitlab_commit_count.txt", "w") as f:
+              f.write(str(total_commit))
+
+          # Buat grafik
+          plt.figure(figsize=(8,2))
+          plt.bar(days, counts, color="#fca326")
+          plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
+          plt.xticks(rotation=45, fontsize=7)
+          plt.yticks(fontsize=7)
+          plt.title("GitLab Commit 30 Hari Terakhir", fontsize=9)
+          plt.tight_layout()
+          plt.savefig("gitlab-commit-graph.png")
+          EOF
 
       - name: Update README.md
         run: |
@@ -39,6 +76,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update GitLab commit stats [skip ci]" || exit 0
+          git add README.md gitlab-commit-graph.png
+          git commit -m "Update GitLab commit stats & graph [skip ci]" || exit 0
           git push
