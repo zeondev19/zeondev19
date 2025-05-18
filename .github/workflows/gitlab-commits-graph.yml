@@ -22,7 +22,9 @@ jobs:
       - name: Generate area chart from GitLab commits
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          GITLAB_PROJECT_ID: ${{ secrets.GITLAB_PROJECT_ID }}
           GITLAB_EMAIL: ${{ secrets.GITLAB_EMAIL }}
+          GITLAB_AUTHOR_NAME: ${{ secrets.GITLAB_AUTHOR_NAME }}
         run: |
           python3 <<EOF
           import requests, os
@@ -33,22 +35,11 @@ jobs:
           from dateutil import parser
 
           TOKEN = os.environ["GITLAB_TOKEN"]
-          AUTHOR_EMAIL = os.environ["GITLAB_EMAIL"].lower()
+          PROJECT_ID = os.environ["GITLAB_PROJECT_ID"]
+          AUTHOR_EMAIL = os.environ.get("GITLAB_EMAIL", "").lower()
+          AUTHOR_NAME = os.environ.get("GITLAB_AUTHOR_NAME", "")
 
           headers = {"PRIVATE-TOKEN": TOKEN}
-
-          # Get all projects where user is a member (with pagination)
-          projects_url = "https://gitlab.com/api/v4/projects?membership=true&per_page=100"
-          all_projects = []
-          page = 1
-          while True:
-              projects = requests.get(projects_url + f"&page={page}", headers=headers).json()
-              if not isinstance(projects, list) or len(projects) == 0:
-                  break
-              all_projects.extend(projects)
-              if len(projects) < 100:
-                  break
-              page += 1
 
           today = datetime.utcnow()
           since = (today - timedelta(days=29)).isoformat() + "Z"
@@ -56,32 +47,29 @@ jobs:
 
           commits_per_day = Counter()
 
-          for project in all_projects:
-              project_id = project["id"]
-              # Fetch commits for the last 30 days for each project (with pagination)
-              commits_url = f"https://gitlab.com/api/v4/projects/{project_id}/repository/commits?since={since}&until={until}&per_page=100"
-              page_commit = 1
-              while True:
-                  commits = requests.get(commits_url + f"&page={page_commit}", headers=headers).json()
-                  if not isinstance(commits, list) or len(commits) == 0:
-                      break
-                  for commit in commits:
-                      if commit.get("author_email", "").lower() == AUTHOR_EMAIL:
-                          dt = parser.isoparse(commit["created_at"])
-                          commits_per_day[dt.date()] += 1
-                  if len(commits) < 100:
-                      break
-                  page_commit += 1
+          page_commit = 1
+          while True:
+              commits_url = f"https://gitlab.com/api/v4/projects/{PROJECT_ID}/repository/commits?since={since}&until={until}&per_page=100&page={page_commit}"
+              commits = requests.get(commits_url, headers=headers).json()
+              if not isinstance(commits, list) or len(commits) == 0:
+                  break
+              for commit in commits:
+                  email_match = AUTHOR_EMAIL and commit.get("author_email", "").lower() == AUTHOR_EMAIL
+                  name_match = AUTHOR_NAME and commit.get("author_name", "") == AUTHOR_NAME
+                  if email_match or name_match:
+                      dt = parser.isoparse(commit["created_at"])
+                      commits_per_day[dt.date()] += 1
+              if len(commits) < 100:
+                  break
+              page_commit += 1
 
           days_ago = today - timedelta(days=29)
           days = [days_ago.date() + timedelta(days=i) for i in range(30)]
           counts = [commits_per_day.get(day, 0) for day in days]
 
-          # Debug: print to log
           print("Commits per day:", commits_per_day)
           print("Total commits found:", sum(counts))
 
-          # Area chart
           plt.figure(figsize=(9, 3))
           plt.fill_between(days, counts, color='#fca326', alpha=0.4)
           plt.plot(days, counts, marker='o', color='#fca326', linewidth=2)
