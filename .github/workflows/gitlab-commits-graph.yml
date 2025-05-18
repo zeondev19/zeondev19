@@ -66,7 +66,7 @@ jobs:
                   if not isinstance(commits, list) or len(commits) == 0:
                       break
                   for commit in commits:
-                      if commit.get("author_name", "").lower() == USERNAME.lower():
+                      if commit.get("author_email", "").lower() == os.environ["GITLAB_EMAIL"].lower():
                           dt = parser.isoparse(commit["created_at"])
                           commits_per_day[dt.date()] += 1
                   if len(commits) < 100:
