@@ -108,7 +108,6 @@ GitLab commits 30 hari terakhir: 20
 ## 📈 GitLab Commit Activity (30 Hari Terakhir)
 ![GitLab Commit Graph](gitlab-commit-graph.png?raw=true)
 ---
-
 [![GitLab](https://img.shields.io/badge/GitLab-Profile-orange?style=for-the-badge&logo=gitlab)](https://gitlab.com/zeondev19)
 
 ---
