@@ -35,7 +35,7 @@ jobs:
 
           headers = {"PRIVATE-TOKEN": TOKEN}
 
-          # Ambil semua project di mana kamu adalah member/contributor
+          # Ambil semua project di mana kamu adalah member/contributor (pagination)
           projects_url = f"https://gitlab.com/api/v4/projects?membership=true&per_page=100"
           all_projects = []
           page = 1
@@ -56,7 +56,7 @@ jobs:
 
           for project in all_projects:
               project_id = project["id"]
-              # Ambil commit 30 hari terakhir untuk tiap project
+              # Ambil commit 30 hari terakhir untuk tiap project (pagination)
               commits_url = f"https://gitlab.com/api/v4/projects/{project_id}/repository/commits?since={since}&until={until}&per_page=100"
               page_commit = 1
               while True:
@@ -97,5 +97,5 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git rm -f gitlab-commit-graph.png || true
           git add gitlab-commit-graph.png
-          git commit -m "update: GitLab commit graph [skip ci]" || exit 0
+          git diff --cached --quiet || git commit -m "update: GitLab commit graph [skip ci]"
           git push
