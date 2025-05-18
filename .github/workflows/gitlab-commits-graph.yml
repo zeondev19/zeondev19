@@ -35,9 +35,10 @@ jobs:
 
           headers = {"PRIVATE-TOKEN": TOKEN}
 
-          # Ambil semua project milik user
-          projects_url = f"https://gitlab.com/api/v4/users/{USERNAME}/projects?per_page=100"
+          # Ambil semua project tempat user adalah anggota/member
+          projects_url = f"https://gitlab.com/api/v4/projects?membership=true&per_page=100"
           projects = requests.get(projects_url, headers=headers).json()
+
           today = datetime.utcnow()
           since = (today - timedelta(days=29)).isoformat() + "Z"
           until = today.isoformat() + "Z"
@@ -46,12 +47,14 @@ jobs:
 
           for project in projects:
               project_id = project["id"]
-              # Ambil semua commit 30 hari terakhir pada setiap project
+              # Ambil commit 30 hari terakhir untuk tiap project
               commits_url = f"https://gitlab.com/api/v4/projects/{project_id}/repository/commits?since={since}&until={until}&per_page=100"
               commits = requests.get(commits_url, headers=headers).json()
               for commit in commits:
-                  dt = parser.isoparse(commit["created_at"])
-                  commits_per_day[dt.date()] += 1
+                  # Filter hanya commit yang author_name-nya USERNAME (opsional, supaya tidak menghitung commit orang lain)
+                  if commit.get("author_name", "").lower() == USERNAME.lower():
+                      dt = parser.isoparse(commit["created_at"])
+                      commits_per_day[dt.date()] += 1
 
           days_ago = today - timedelta(days=29)
           days = [days_ago.date() + timedelta(days=i) for i in range(30)]
