@@ -54,7 +54,8 @@ jobs:
               if not isinstance(commits, list) or len(commits) == 0:
                   break
               for commit in commits:
-                  print(commit)  # CETAK DATA MENTAH
+                  print("==== COMMIT ====")
+                  print(commit)  # CETAK DATA MENTAH KE LOG
                   email_match = (
                       (AUTHOR_EMAIL and commit.get("author_email", "").lower() == AUTHOR_EMAIL) or
                       (AUTHOR_EMAIL and commit.get("committer_email", "").lower() == AUTHOR_EMAIL)
