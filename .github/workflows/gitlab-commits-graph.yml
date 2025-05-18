@@ -25,6 +25,7 @@ jobs:
           GITLAB_PROJECT_ID: ${{ secrets.GITLAB_PROJECT_ID }}
           GITLAB_EMAIL: ${{ secrets.GITLAB_EMAIL }}
           GITLAB_AUTHOR_NAME: ${{ secrets.GITLAB_AUTHOR_NAME }}
+          GITLAB_BRANCH: ${{ secrets.GITLAB_BRANCH }} # ex: development
         run: |
           python3 <<EOF
           import requests, os
@@ -38,6 +39,7 @@ jobs:
           PROJECT_ID = os.environ["GITLAB_PROJECT_ID"]
           AUTHOR_EMAIL = os.environ.get("GITLAB_EMAIL", "").lower()
           AUTHOR_NAME = os.environ.get("GITLAB_AUTHOR_NAME", "")
+          BRANCH = os.environ.get("GITLAB_BRANCH", "") # ex: development
 
           headers = {"PRIVATE-TOKEN": TOKEN}
 
@@ -49,13 +51,19 @@ jobs:
 
           page_commit = 1
           while True:
-              commits_url = f"https://gitlab.com/api/v4/projects/{PROJECT_ID}/repository/commits?since={since}&until={until}&per_page=100&page={page_commit}"
-              commits = requests.get(commits_url, headers=headers).json()
+              url = (
+                  f"https://gitlab.com/api/v4/projects/{PROJECT_ID}/repository/commits"
+                  f"?since={since}&until={until}&per_page=100&page={page_commit}"
+              )
+              if BRANCH:
+                  url += f"&ref_name={BRANCH}"
+
+              commits = requests.get(url, headers=headers).json()
               if not isinstance(commits, list) or len(commits) == 0:
                   break
               for commit in commits:
                   print("==== COMMIT ====")
-                  print(commit)  # CETAK DATA MENTAH KE LOG
+                  print(commit)
                   email_match = (
                       (AUTHOR_EMAIL and commit.get("author_email", "").lower() == AUTHOR_EMAIL) or
                       (AUTHOR_EMAIL and commit.get("committer_email", "").lower() == AUTHOR_EMAIL)
