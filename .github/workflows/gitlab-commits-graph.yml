@@ -54,8 +54,15 @@ jobs:
               if not isinstance(commits, list) or len(commits) == 0:
                   break
               for commit in commits:
-                  email_match = AUTHOR_EMAIL and commit.get("author_email", "").lower() == AUTHOR_EMAIL
-                  name_match = AUTHOR_NAME and commit.get("author_name", "") == AUTHOR_NAME
+                  print(commit)  # CETAK DATA MENTAH
+                  email_match = (
+                      (AUTHOR_EMAIL and commit.get("author_email", "").lower() == AUTHOR_EMAIL) or
+                      (AUTHOR_EMAIL and commit.get("committer_email", "").lower() == AUTHOR_EMAIL)
+                  )
+                  name_match = (
+                      (AUTHOR_NAME and commit.get("author_name", "") == AUTHOR_NAME) or
+                      (AUTHOR_NAME and commit.get("committer_name", "") == AUTHOR_NAME)
+                  )
                   if email_match or name_match:
                       dt = parser.isoparse(commit["created_at"])
                       commits_per_day[dt.date()] += 1
