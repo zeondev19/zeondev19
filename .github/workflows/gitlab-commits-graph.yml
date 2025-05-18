@@ -100,11 +100,11 @@ jobs:
           plt.savefig("gitlab-commit-graph.png")
           EOF
 
-      - name: Commit & Push updated graph
+      - name: Commit & Push graph
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add gitlab-commit-graph.png
-          git diff --cached --quiet || git commit -m "update: GitLab commit graph [skip ci]"
+          git commit -m "update: GitLab commit graph [skip ci]" || echo "No changes to commit"
           git pull --rebase
           git push
