@@ -102,7 +102,7 @@ I’m a passionate Full Stack Developer specializing in Laravel and PHP, with st
 ---
 ## 🔥 Aktivitas Commit Saya di GitLab
 
-GitLab commits 30 hari terakhir: 
+GitLab commits 30 hari terakhir: 20
 
 ---
 ## 📈 GitLab Commit Activity (30 Hari Terakhir)
