@@ -19,13 +19,10 @@ jobs:
           sudo apt-get install -y python3-pip
           pip install matplotlib requests python-dateutil
 
-      - name: Generate area chart from GitLab commits
+      - name: Ambil data commit GitLab
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
-          GITLAB_PROJECT_ID: ${{ secrets.GITLAB_PROJECT_ID }}
-          GITLAB_EMAIL: ${{ secrets.GITLAB_EMAIL }}
-          GITLAB_AUTHOR_NAME: ${{ secrets.GITLAB_AUTHOR_NAME }}
-          GITLAB_BRANCH: ${{ secrets.GITLAB_BRANCH }} # ex: development
+          GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
         run: |
           python3 <<EOF
           import requests, os
@@ -36,69 +33,43 @@ jobs:
           from dateutil import parser
 
           TOKEN = os.environ["GITLAB_TOKEN"]
-          PROJECT_ID = os.environ["GITLAB_PROJECT_ID"]
-          AUTHOR_EMAIL = os.environ.get("GITLAB_EMAIL", "").lower()
-          AUTHOR_NAME = os.environ.get("GITLAB_AUTHOR_NAME", "")
-          BRANCH = os.environ.get("GITLAB_BRANCH", "") # ex: development
+          USERNAME = os.environ["GITLAB_USERNAME"]
 
           headers = {"PRIVATE-TOKEN": TOKEN}
+          url = f"https://gitlab.com/api/v4/users/{USERNAME}/events?action=pushed&per_page=100"
+          resp = requests.get(url, headers=headers)
+          events = resp.json()
 
+          # Hitung commit per hari selama 30 hari terakhir
           today = datetime.utcnow()
-          since = (today - timedelta(days=29)).isoformat() + "Z"
-          until = today.isoformat() + "Z"
-
+          days_ago = today - timedelta(days=29)
           commits_per_day = Counter()
 
-          page_commit = 1
-          while True:
-              url = (
-                  f"https://gitlab.com/api/v4/projects/{PROJECT_ID}/repository/commits"
-                  f"?since={since}&until={until}&per_page=100&page={page_commit}"
-              )
-              if BRANCH:
-                  url += f"&ref_name={BRANCH}"
-
-              commits = requests.get(url, headers=headers).json()
-              if not isinstance(commits, list) or len(commits) == 0:
-                  break
-              for commit in commits:
-                  print("==== COMMIT ====")
-                  print(commit)
-                  email_match = (
-                      (AUTHOR_EMAIL and commit.get("author_email", "").lower() == AUTHOR_EMAIL) or
-                      (AUTHOR_EMAIL and commit.get("committer_email", "").lower() == AUTHOR_EMAIL)
-                  )
-                  name_match = (
-                      (AUTHOR_NAME and commit.get("author_name", "") == AUTHOR_NAME) or
-                      (AUTHOR_NAME and commit.get("committer_name", "") == AUTHOR_NAME)
-                  )
-                  if email_match or name_match:
-                      dt = parser.isoparse(commit["created_at"])
+          for event in events:
+              if 'created_at' in event:
+                  dt = parser.isoparse(event['created_at'])
+                  if dt.date() >= days_ago.date():
+                      # Set ke tanggal UTC, hanya tanggal
                       commits_per_day[dt.date()] += 1
-              if len(commits) < 100:
-                  break
-              page_commit += 1
 
-          days_ago = today - timedelta(days=29)
           days = [days_ago.date() + timedelta(days=i) for i in range(30)]
           counts = [commits_per_day.get(day, 0) for day in days]
 
-          print("Commits per day:", commits_per_day)
-          print("Total commits found:", sum(counts))
-
-          plt.figure(figsize=(9, 3))
-          plt.fill_between(days, counts, color='#fca326', alpha=0.4)
-          plt.plot(days, counts, marker='o', color='#fca326', linewidth=2)
+          # Buat grafik
+          plt.figure(figsize=(8,2))
+          plt.bar(days, counts, color="#fca326")
           plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
-          plt.xticks(rotation=45, fontsize=8)
-          plt.yticks(fontsize=8)
-          plt.title("GitLab Commit Activity (Last 30 Days)", fontsize=11, weight='bold')
-          plt.grid(axis='y', linestyle='--', linewidth=0.5, alpha=0.7)
-          plt.xlabel("Date", fontsize=9)
-          plt.ylabel("Commits", fontsize=9)
+          plt.xticks(rotation=45, fontsize=7)
+          plt.yticks(fontsize=7)
+          plt.title("GitLab Commit 30 Hari Terakhir", fontsize=9)
           plt.tight_layout()
           plt.savefig("gitlab-commit-graph.png")
           EOF
+
+      - name: Lihat perubahan file
+        run: |
+          ls -lah gitlab-commit-graph.png
+          git status
 
       - name: Commit & Push graph
         run: |
