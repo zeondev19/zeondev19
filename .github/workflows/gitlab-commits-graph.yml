@@ -35,9 +35,18 @@ jobs:
 
           headers = {"PRIVATE-TOKEN": TOKEN}
 
-          # Ambil semua project tempat user adalah anggota/member
+          # Ambil semua project di mana kamu adalah member/contributor
           projects_url = f"https://gitlab.com/api/v4/projects?membership=true&per_page=100"
-          projects = requests.get(projects_url, headers=headers).json()
+          all_projects = []
+          page = 1
+          while True:
+              projects = requests.get(projects_url + f"&page={page}", headers=headers).json()
+              if not isinstance(projects, list) or len(projects) == 0:
+                  break
+              all_projects.extend(projects)
+              if len(projects) < 100:
+                  break
+              page += 1
 
           today = datetime.utcnow()
           since = (today - timedelta(days=29)).isoformat() + "Z"
@@ -45,16 +54,23 @@ jobs:
 
           commits_per_day = Counter()
 
-          for project in projects:
+          for project in all_projects:
               project_id = project["id"]
               # Ambil commit 30 hari terakhir untuk tiap project
               commits_url = f"https://gitlab.com/api/v4/projects/{project_id}/repository/commits?since={since}&until={until}&per_page=100"
-              commits = requests.get(commits_url, headers=headers).json()
-              for commit in commits:
-                  # Filter hanya commit yang author_name-nya USERNAME (opsional, supaya tidak menghitung commit orang lain)
-                  if commit.get("author_name", "").lower() == USERNAME.lower():
-                      dt = parser.isoparse(commit["created_at"])
-                      commits_per_day[dt.date()] += 1
+              page_commit = 1
+              while True:
+                  commits = requests.get(commits_url + f"&page={page_commit}", headers=headers).json()
+                  if not isinstance(commits, list) or len(commits) == 0:
+                      break
+                  for commit in commits:
+                      # Filter hanya commit yang author_name-nya sesuai
+                      if commit.get("author_name", "").lower() == USERNAME.lower():
+                          dt = parser.isoparse(commit["created_at"])
+                          commits_per_day[dt.date()] += 1
+                  if len(commits) < 100:
+                      break
+                  page_commit += 1
 
           days_ago = today - timedelta(days=29)
           days = [days_ago.date() + timedelta(days=i) for i in range(30)]
