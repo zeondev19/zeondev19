@@ -8,7 +8,7 @@
 <h3 align="center">🚀 Full Stack Developer | 🎨 AI Prompter | 🧙‍♂️ Laravel Wizard</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&center=true&vCenter=true&width=600&lines=Full+Stack+Engineer+%F0%9F%9A%80;AI+Prompting+Specialist+%F0%9F%A4%96;Laravel+%7C+Vue+%7C+PHP+Wizardry;Code+.+Prompt+.+Innovate" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&center=true&vCenter=true&width=600&lines=Building+Scalable+Apps+%F0%9F%9A%80;Crafting+Creative+AI+Prompts+%F0%9F%A4%96;Full+Stack+Engineering+%7C+Laravel+Enthusiast;Code+.+Innovate+.+Repeat" alt="Typing SVG" />
 </p>
 
 ---
@@ -69,28 +69,62 @@ A collection of **AI prompt engineering experiments** for ChatGPT, MidJourney, a
 
 ---
 
-## 🧠 AI Prompter Portfolio  
+## 📊 GitHub Performance
 
 <p align="center">
-  <img src="https://media.giphy.com/media/Q8xuJjjxQfRbA/giphy.gif" width="300" alt="AI brain gif"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=zeondev19&show_icons=true&count_private=true&theme=tokyonight" alt="stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=zeondev19&theme=tokyonight" alt="streak" />
 </p>
 
-As an **AI Prompter**, I design structured and creative prompts that push AI models like **ChatGPT, MidJourney, and Stable Diffusion** to their full potential.  
-This isn’t just about asking questions — it’s about **engineering the conversation** to get results that feel **almost human-made**.  
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&theme=radical" alt="langs" />
+</p>
 
-### 🪄 Prompting Skills
-- ✨ **ChatGPT Mastery** – crafting precise, role-based, and multi-turn prompts  
-- 🎨 **MidJourney Artist** – generating surreal & cinematic visuals through creative prompting  
-- 🎬 **Stable Diffusion Tuner** – fine-tuning image prompts with weights and modifiers  
-- 🧩 **System Prompts Architect** – designing reusable templates for AI workflows  
+---
 
-### 📌 Example Prompts
-```md
-🧙 Roleplay Prompt:  
-"You are a cyberpunk hacker mentor guiding me through a neon city while teaching JavaScript basics."
+---
+## 🔥 Aktivitas Commit Saya di GitLab
 
-🎨 MidJourney Prompt:  
-"A moving castle flying over neon Tokyo skyline, Studio Ghibli style, ultra detailed, cinematic lighting."
+GitLab commits 30 hari terakhir: 20
 
-📊 Productivity Prompt:  
-"Act as a project manager. Break down my web app idea into milestones, tasks, and deadlines."
+---
+## 📈 GitLab Commit Activity (30 Hari Terakhir)
+![GitLab Commit Graph](gitlab-commit-graph.png?raw=true)
+---
+[![GitLab](https://img.shields.io/badge/GitLab-Profile-orange?style=for-the-badge&logo=gitlab)](https://gitlab.com/zeondev19)
+
+---
+
+## 🏆 Achievements & Badges
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=zeondev19&theme=dracula&margin-w=10&margin-h=10&no-frame=true" />
+</p>
+
+---
+
+## 📬 Let's Connect
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tengku-bintang-zaky-irmaysa/)
+[![GitLab](https://img.shields.io/badge/GitLab-orange?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/zeondev19)
+[![Email](https://img.shields.io/badge/Email-d14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zeondev19@gmail.com)
+
+</div>
+
+---
+
+<p align="center">
+  <img src="https://i.ibb.co/N7hLznj/moving-castle.gif" alt="moving castle gif" width="300" />
+</p>
+
+<h3 align="center">⚡ "Code is game, and I play to win." ⚡</h3>
+
+```php
+while (alive) {
+   learn();
+   code();
+   innovate();
+   repeat();
+}
