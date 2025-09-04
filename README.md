@@ -84,13 +84,6 @@ A collection of **AI prompt engineering experiments** for ChatGPT, MidJourney, a
 </p>
 
 ---
-
----
-## 🔥 Aktivitas Commit Saya di GitLab
-
-GitLab commits 30 hari terakhir: 20
-
----
 ## 📈 GitLab Commit Activity (30 Hari Terakhir)
 ![GitLab Commit Graph](gitlab-commit-graph.png?raw=true)
 ---
