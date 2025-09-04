@@ -1,4 +1,6 @@
-<!-- 🌌 Animated Banner -->
+<p align="center">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHJpOGs4ZzY1b2hrcGxwanNydzZteDVieWVwN2RxNjVicWtocG1kZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cPZdap8PGhSvABr6xW/giphy.gif" width="100%" alt="Falling Stars Animation" />
+</p>
 
 
 <h1 align="center">⚡ Tengku Bintang Zaky Irmaysa ⚡</h1>
