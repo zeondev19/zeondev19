@@ -1,103 +1,94 @@
-<h1 align="center">Tengku Bintang Zaky Irmaysa</h1>
-
-<h4 align="center">Full Stack Developer | Laravel Enthusiast | PHP Wizard</h4>
-
+<!-- 🌌 Animated Banner -->
 <p align="center">
-  <a href="#-about-me">About Me</a> •
-  <a href="#-skills">Skills</a> •
-  <a href="#-projects">Projects</a> •
-  <a href="#-stats">Stats</a> •
-  <a href="#-contributions">Contributions</a> •
-  <a href="#-contact">Contact</a>
+  <img src="https://i.ibb.co/qdLShsB/stars-falling.gif" alt="stars falling" width="100%" />
 </p>
 
+<h1 align="center">⚡ Tengku Bintang Zaky Irmaysa ⚡</h1>
+
+<h3 align="center">🚀 Full Stack Developer | 🎨 AI Prompter | 🧙‍♂️ Laravel Wizard</h3>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&center=true&vCenter=true&width=600&lines=Building+Scalable+Apps+%F0%9F%9A%80;Crafting+Creative+AI+Prompts+%F0%9F%A4%96;Full+Stack+Engineering+%7C+Laravel+Enthusiast;Code+.+Innovate+.+Repeat" alt="Typing SVG" />
+</p>
+
+---
+
+## 🌟 About Me
+
+> _"Half wizard, half hacker, fully passionate."_  
+
+I'm **Bintang** — a curious soul who loves turning ideas into reality through **code** and **AI prompting magic**.  
+I blend **full stack engineering** with **creative AI workflows**, making projects not just functional but **memorable**.  
+
+- 💻 Backend wizardry with **Laravel, PHP, and Node.js**  
+- ⚡ Frontend spells using **Vue.js & TailwindCSS**  
+- 🧠 **AI Prompter** — mastering the art of asking the right questions  
+- 🌍 Always exploring new tech dimensions  
+
+---
+
+## 🛠️ Tech Arsenal
+
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/tengku-bintang-zaky-irmaysa/)
-[![Website](https://img.shields.io/badge/-Website-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)](https://yourwebsite.com)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-42b883?style=for-the-badge&logo=vuedotjs&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38b2ac?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
 </div>
 
 ---
 
-## 🚀 About Me
+## 🎨 Featured Projects
 
-```
- _____________________________________
-/ I'm a passionate developer who loves \
-| crafting elegant solutions to        |
-| complex problems. With a keen eye    |
-| for detail and a drive for           |
-| excellence, I strive to create       |
-| impactful and efficient web          |
-\ applications.                        /
- -------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-```
+<table align="center">
+<tr>
+<td align="center" width="50%">
+  
+### 🍽️ [Catering Web App](https://github.com/zeondev19/Capstone_Project_C624-PS056)  
+Online catering system with menu personalization and real-time ordering.  
 
-I’m a passionate Full Stack Developer specializing in Laravel and PHP, with strong skills in JavaScript and Vue.js. My goal is to build scalable, secure, and impactful web applications. I’m always eager to learn, innovate, and contribute to the tech community.
+**Stack:** Laravel · Vue.js · MySQL  
 
----
+</td>
+<td align="center" width="50%">
+  
+### 🤖 AI Prompt Showcase  
+A collection of **AI prompt engineering experiments** for ChatGPT, MidJourney, and more.  
 
-## 💻 Skills
+**Stack:** Markdown · Creativity 💡  
 
-### Programming Languages
-![PHP](https://img.shields.io/badge/-PHP-777BB4?style=flat-square&logo=php&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-
-### Frameworks
-![Laravel](https://img.shields.io/badge/-Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white)
-![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-
-### Databases
-![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-
-### Tools
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+</td>
+</tr>
+</table>
 
 ---
 
-## 🏆 Projects
+## 📊 GitHub Performance
 
-<div align="center">
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=zeondev19&show_icons=true&count_private=true&theme=tokyonight" alt="stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=zeondev19&theme=tokyonight" alt="streak" />
+</p>
 
-| Project | Description | Tech Stack | Link |
-|:-------:|:-----------:|:----------:|:----:|
-| 🚀 Project A | A web catering application that allows users to order food online with menu personalization features. | Laravel, JavaScript, MySQL | [View Project](https://github.com/zeondev19/Capstone_Project_C624-PS056) |
-
-</div>
-
----
-
-## 📊 Stats
-
-<div align="center">
-
-![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=zeondev19&show_icons=true&count_private=true&theme=radical)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=zeondev19&theme=onedark&count_private=true&cache_seconds=3600)
-
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeondev19&layout=compact&theme=radical" alt="langs" />
+</p>
 
 ---
 
-## ✨ Contributions
-<div align="center">
+## 🏆 Achievements & Badges
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=zeondev19&theme=tokyonight&cache_seconds=86400)
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=zeondev19&theme=dracula&margin-w=10&margin-h=10&no-frame=true" />
+</p>
 
-</div>
+---
 
 ---
 ## 🔥 Aktivitas Commit Saya di GitLab
@@ -112,32 +103,28 @@ GitLab commits 30 hari terakhir: 20
 
 ---
 
-## 📬 Contact
+## 📬 Let's Connect
 
 <div align="center">
 
-Got a project in mind? Let's collaborate and build something amazing together!
-
-[![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zeondev19@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tengku-bintang-zaky-irmaysa/)
+[![GitLab](https://img.shields.io/badge/GitLab-orange?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/zeondev19)
+[![Email](https://img.shields.io/badge/Email-d14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zeondev19@gmail.com)
 
 </div>
 
 ---
 
-<div align="center">
+<p align="center">
+  <img src="https://i.ibb.co/N7hLznj/moving-castle.gif" alt="moving castle gif" width="300" />
+</p>
 
-### "Code is Game."
+<h3 align="center">⚡ "Code is game, and I play to win." ⚡</h3>
 
 ```php
-while(alive) {
-    learn();
-    code();
-    innovate();
-    repeat();
+while (alive) {
+   learn();
+   code();
+   innovate();
+   repeat();
 }
-```
-
-
-⭐️ From [Tengku Bintang Zaky Irmaysa](https://github.com/zeondev19)
-
-</div>
