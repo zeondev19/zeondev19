@@ -72,7 +72,7 @@ I’m a passionate Full Stack Developer specializing in Laravel and PHP, with st
 
 | Project | Description | Tech Stack | Link |
 |:-------:|:-----------:|:----------:|:----:|
-| 🚀 Project A | A web catering application that allows users to order food online with menu personalization features. | Laravel, JavaScript, MySQL | [View Project](https://github.com/yourusername/project-a) |
+| 🚀 Project A | A web catering application that allows users to order food online with menu personalization features. | Laravel, JavaScript, MySQL | [View Project](https://github.com/zeondev19/Capstone_Project_C624-PS056) |
 
 </div>
 
