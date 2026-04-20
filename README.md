@@ -8,7 +8,7 @@
 
 <h1 align="center">⚡ Tengku Bintang Zaky Irmaysa ⚡</h1>
 
-<h3 align="center">🚀 Full Stack Developer | 🎨 AI Prompter | 🧙‍♂️ Laravel Wizard</h3>
+<h3 align="center">🚀 Full Stack Developer | ⚛︎ React & Node.js specialist | 🧙‍♂️ Laravel Wizard | 👩🏻‍💻 3+ years experience in Enterprise Apps </h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&center=true&vCenter=true&width=600&lines=Building+Scalable+Apps+%F0%9F%9A%80;Crafting+Creative+AI+Prompts+%F0%9F%A4%96;Full+Stack+Engineering+%7C+Laravel+Enthusiast;Code+.+Innovate+.+Repeat" alt="Typing SVG" />
