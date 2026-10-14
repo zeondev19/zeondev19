@@ -1,11 +1,11 @@
-<div align="center">
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHJpOGs4ZzY1b2hrcGxwanNydzZteDVieWVwN2RxNjVicWtocG1kZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cPZdap8PGhSvABr6xW/giphy.gif" width="100%" height="220" style="object-fit: cover; border-radius: 10px;" alt="Banner Animation" />
-</div>
+<p align="center">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHJpOGs4ZzY1b2hrcGxwanNydzZteDVieWVwN2RxNjVicWtocG1kZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cPZdap8PGhSvABr6xW/giphy.gif" width="100%" alt="Banner Animation" />
+</p>
 
 <h1 align="center">⚡ Tengku Bintang Zaky Irmaysa ⚡</h1>
 
 <h3 align="center">
-  🚀 Full Stack Software Engineer &nbsp;|&nbsp; ⚛️ React, Next.js & TypeScript &nbsp;|&nbsp; 🧙‍♂️ Laravel & Node.js &nbsp;|&nbsp; 🏢 Enterprise Systems
+  🚀 Full Stack Engineer &nbsp;|&nbsp; ⚛️ React, Next.js & TypeScript &nbsp;|&nbsp; 🧙‍♂️ Laravel & Node.js &nbsp;|&nbsp; 🏢 Enterprise Architecture
 </h3>
 
 <div align="center">
@@ -118,15 +118,7 @@ End-to-end web development for commercial clients and organizations—delivering
 
 ![GitHub Streak](https://streak-stats.demolab.com?user=zeondev19&theme=tokyonight&hide_border=true)
 
-</div>
-
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=zeondev19&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=15)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=zeondev19&theme=tokyo-night&hide_border=true&area=true)
 
 </div>
 
