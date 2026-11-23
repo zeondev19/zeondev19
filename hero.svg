@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="880" height="320" role="img" aria-label="Tengku Bintang Zaky Irmaysa - Animated GitHub Hero">
+  <defs>
+    
+    <linearGradient id="hero-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="55%" stop-color="#0f1526" />
+      <stop offset="100%" stop-color="#0b0f19" />
+    </linearGradient>
+
+    <radialGradient id="hero-glow-luffy" cx="15%" cy="20%" r="45%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="hero-glow-zoro" cx="85%" cy="80%" r="45%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="hero-glow-sanji" cx="65%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+
+    
+    <linearGradient id="hero-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.65" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.65" />
+    </linearGradient>
+
+    
+    <linearGradient id="hero-name-grad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="28%" stop-color="#f59e0b" />
+      <stop offset="56%" stop-color="#10b981" />
+      <stop offset="82%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#ef4444" />
+      <animate attributeName="x1" values="0%;-100%;0%" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="200%;100%;200%" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+
+    
+    <pattern id="hero-dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#94a3b8" fill-opacity="0.14" />
+    </pattern>
+
+    
+    <radialGradient id="hero-portrait-mask-grad" cx="50%" cy="48%" r="50%">
+      <stop offset="68%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="92%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <mask id="hero-portrait-mask">
+      <rect x="578" y="34" width="260" height="252" fill="url(#hero-portrait-mask-grad)" />
+    </mask>
+
+    
+    <clipPath id="hero-vf-clip">
+      <rect x="572" y="28" width="272" height="264" rx="14" />
+    </clipPath>
+
+    
+    <clipPath id="hero-name-clip">
+      <rect x="34" y="102" width="515" height="60">
+        <animate attributeName="y" from="162" to="102" dur="0.7s" begin="0s" fill="freeze" keyTimes="0;1" calcMode="spline" keySplines="0.22 1 0.36 1" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <style>
+    .hero-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .hero-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    @keyframes heroFadeUp {
+      0% { opacity: 0; transform: translateY(8px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.35); }
+    }
+    @keyframes heroBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0.15; }
+    }
+    @keyframes heroBracketDraw {
+      0% { stroke-dashoffset: 48; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+    @keyframes heroScanline {
+      0% { transform: translateY(0px); opacity: 0; }
+      10% { opacity: 0.45; }
+      90% { opacity: 0.45; }
+      100% { transform: translateY(250px); opacity: 0; }
+    }
+    @keyframes heroScrub {
+      0% { transform: scaleX(0.05); }
+      85% { transform: scaleX(1); }
+      100% { transform: scaleX(1); }
+    }
+
+    /* Cycling Roles (9s loop; Role 1 visible at 0s for static fallback) */
+    @keyframes heroRole1 {
+      0%, 28% { opacity: 1; transform: translateY(0); }
+      33%, 95% { opacity: 0; transform: translateY(-6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroRole2 {
+      0%, 31% { opacity: 0; transform: translateY(6px); }
+      36%, 61% { opacity: 1; transform: translateY(0); }
+      66%, 100% { opacity: 0; transform: translateY(-6px); }
+    }
+    @keyframes heroRole3 {
+      0%, 64% { opacity: 0; transform: translateY(6px); }
+      69%, 94% { opacity: 1; transform: translateY(0); }
+      99%, 100% { opacity: 0; transform: translateY(-6px); }
+    }
+
+    .anim-up-1 { animation: heroFadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+    .anim-up-2 { animation: heroFadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
+    .anim-up-3 { animation: heroFadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.4s both; }
+    .anim-up-4 { animation: heroFadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.55s both; }
+
+    .pulse-dot {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: heroPulse 2s ease-in-out infinite;
+    }
+    .blink-el { animation: heroBlink 1.1s step-end infinite; }
+    .bracket {
+      stroke-dasharray: 48;
+      animation: heroBracketDraw 0.9s cubic-bezier(0.22,1,0.36,1) 0.1s both;
+    }
+    .scanline { animation: heroScanline 4.5s linear infinite; }
+    .scrubber-fill {
+      transform-origin: 588px 276px;
+      animation: heroScrub 6s linear infinite;
+    }
+
+    .role-1 { animation: heroRole1 9s ease-in-out infinite; }
+    .role-2 { animation: heroRole2 9s ease-in-out infinite; }
+    .role-3 { animation: heroRole3 9s ease-in-out infinite; }
+  </style>
+
+  
+  <rect x="1" y="1" width="878" height="318" rx="18" fill="url(#hero-bg-grad)" />
+  <rect x="1" y="1" width="878" height="318" rx="18" fill="url(#hero-dots)" />
+  <rect x="1" y="1" width="878" height="318" rx="18" fill="url(#hero-glow-luffy)" />
+  <rect x="1" y="1" width="878" height="318" rx="18" fill="url(#hero-glow-zoro)" />
+  <rect x="1" y="1" width="878" height="318" rx="18" fill="url(#hero-glow-sanji)" />
+  <rect x="1" y="1" width="878" height="318" rx="18" fill="none" stroke="url(#hero-border-grad)" stroke-width="1.4" />
+
+  
+  <g class="anim-up-1">
+    
+    <rect x="36" y="34" width="166" height="28" rx="14" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-opacity="0.45" stroke-width="1" />
+    <circle cx="52" cy="48" r="4" fill="#10b981" class="pulse-dot" />
+    <text x="64" y="52" fill="#34d399" font-size="11.5" font-weight="600" letter-spacing="0.8" class="hero-mono">OPEN TO COLLABS</text>
+
+    
+    <rect x="212" y="34" width="118" height="28" rx="14" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-opacity="0.4" stroke-width="1" />
+    <text x="225" y="52" fill="#f87171" font-size="11" font-weight="600" letter-spacing="0.6" class="hero-mono">@zeondev19</text>
+  </g>
+
+  
+  <g class="anim-up-2">
+    <text x="36" y="96" fill="#94a3b8" font-size="16" font-weight="500" class="hero-mono">
+      Hi there, I'm<tspan fill="#f59e0b" class="blink-el">_</tspan>
+    </text>
+  </g>
+
+  
+  <g clip-path="url(#hero-name-clip)">
+    <text x="36" y="148" fill="url(#hero-name-grad)" font-size="44" font-weight="800" letter-spacing="-0.8" class="hero-sans">Tengku Bintang</text>
+  </g>
+
+  
+  <g class="anim-up-3">
+    <rect x="36" y="168" width="3" height="22" rx="1.5" fill="#f59e0b" />
+    <text x="48" y="184" fill="#f8fafc" font-size="17" font-weight="600" class="hero-sans role-1">Full-Stack &amp; Applied AI Systems Developer</text>
+    <text x="48" y="184" fill="#34d399" font-size="17" font-weight="600" class="hero-sans role-2">Laravel, Python &amp; TypeScript Engineer</text>
+    <text x="48" y="184" fill="#38bdf8" font-size="17" font-weight="600" class="hero-sans role-3">Building Automated Pipelines &amp; SaaS</text>
+  </g>
+
+  
+  <g class="anim-up-3">
+    <text x="36" y="218" fill="#94a3b8" font-size="13.5" class="hero-sans">
+      Turning complex problems into clean architecture, reliable APIs, and
+    </text>
+    <text x="36" y="236" fill="#94a3b8" font-size="13.5" class="hero-sans">
+      measurable production systems — sailing the Grand Line of code.
+    </text>
+  </g>
+
+  
+  <g class="anim-up-4">
+    
+    <line x1="36" y1="256" x2="532" y2="256" stroke="#1e293b" stroke-width="1" />
+
+    
+    <g transform="translate(36, 270)">
+      <path d="M6 1.5C3.5 1.5 1.5 3.5 1.5 6c0 3.4 4.5 7.5 4.5 7.5S10.5 9.4 10.5 6c0-2.5-2-4.5-4.5-4.5zm0 6.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4z" fill="#ef4444" />
+      <text x="18" y="11" fill="#cbd5e1" font-size="12" class="hero-mono">Surabaya, ID</text>
+    </g>
+
+    
+    <g transform="translate(166, 270)">
+      <path d="M9.5 3.5H8V2.5A1.5 1.5 0 0 0 6.5 1h-2A1.5 1.5 0 0 0 3 2.5v1H1.5A1.5 1.5 0 0 0 0 5v5.5A1.5 1.5 0 0 0 1.5 12h8A1.5 1.5 0 0 0 11 10.5V5a1.5 1.5 0 0 0-1.5-1.5zM4 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1H4v-1z" fill="#f59e0b" />
+      <text x="18" y="11" fill="#cbd5e1" font-size="12" class="hero-mono">PT Tako Anugerah</text>
+    </g>
+
+    
+    <g transform="translate(352, 270)">
+      <path d="M6 1l1.5 3.2L11 4.7 8.5 7.1l.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.5L6 1z" fill="#10b981" />
+      <text x="18" y="11" fill="#cbd5e1" font-size="12" class="hero-mono">24 Repos · Pull Shark x2</text>
+    </g>
+  </g>
+
+  
+  <g>
+    
+    <rect x="572" y="28" width="272" height="264" rx="14" fill="#070a12" stroke="#1e293b" stroke-width="1" />
+
+    
+    <g clip-path="url(#hero-vf-clip)">
+      
+      
+      <rect x="572" y="28" width="272" height="2" fill="#38bdf8" fill-opacity="0.35" class="scanline" />
+      
+      <rect x="572" y="244" width="272" height="48" fill="#070a12" fill-opacity="0.72" />
+    </g>
+
+    
+    <g fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
+      <path d="M584 56 V40 H600" class="bracket" />
+      <path d="M832 56 V40 H816" class="bracket" />
+      <path d="M584 264 V280 H600" class="bracket" />
+      <path d="M832 264 V280 H816" class="bracket" />
+    </g>
+
+    
+    <circle cx="602" cy="52" r="4" fill="#ef4444" class="blink-el" />
+    <text x="612" y="56" fill="#f8fafc" font-size="10.5" font-weight="700" letter-spacing="1" class="hero-mono">REC</text>
+    <text x="748" y="56" fill="#94a3b8" font-size="10" letter-spacing="0.5" class="hero-mono">ZEON_01.RAW</text>
+
+    
+    <text x="588" y="264" fill="#34d399" font-size="10" font-weight="600" class="hero-mono">LOG POSE: LOCKED</text>
+    <text x="780" y="264" fill="#94a3b8" font-size="10" class="hero-mono">00:00:19</text>
+
+    <rect x="588" y="274" width="240" height="4" rx="2" fill="#1e293b" />
+    <rect x="588" y="274" width="240" height="4" rx="2" fill="url(#hero-name-grad)" class="scrubber-fill" />
+  </g>
+</svg>
