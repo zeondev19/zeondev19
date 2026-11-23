@@ -1,132 +1,109 @@
-<p align="center">
-  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHJpOGs4ZzY1b2hrcGxwanNydzZteDVieWVwN2RxNjVicWtocG1kZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cPZdap8PGhSvABr6xW/giphy.gif" width="520" alt="Banner Animation" />
-</p>
-
-<h1 align="center">⚡ Tengku Bintang Zaky Irmaysa ⚡</h1>
-
-<h3 align="center">
-  🚀 Full Stack Engineer &nbsp;|&nbsp; ⚛️ React, Next.js & TypeScript &nbsp;|&nbsp; 🧙‍♂️ Laravel & Node.js &nbsp;|&nbsp; 🏢 Enterprise Architecture
-</h3>
-
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=38B2AC&center=true&vCenter=true&width=750&lines=Building+Scalable+Enterprise+Applications+%F0%9F%9A%80;Type-Safe+Engineering+with+TypeScript+%26+React+%E2%9A%9B%EF%B8%8F;Backend+Architecture+with+Laravel+%26+PostgreSQL+%F0%9F%90%98;AI-Augmented+Workflows+%26+System+Automation+%E2%9A%A1)](https://git.io/typing-svg)
+<!-- 🎬 HERO — Captain's Log Pose Viewfinder -->
+<img src="./hero.svg?v=2" alt="Hi, I'm Tengku Bintang Zaky Irmaysa (Zeon) — Full-Stack & Applied AI Systems Developer" width="100%"/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tengku-bintang-zaky-irmaysa/)
-[![GitLab Personal](https://img.shields.io/badge/GitLab_Personal-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/zeondev19)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zeondev19)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zeondev19@gmail.com)
+<br/><br/>
+
+<!-- 🏴‍☠️ MY PIRATE WAY — Monster Trio Architecture -->
+<img src="./pirate-way.svg?v=2" alt="My Pirate Way — Monster Trio Architecture" width="100%"/>
+
+<br/><br/>
+
+<!-- ⚔️ HAKI & SANTORYU ARSENAL — Tech Stack -->
+<img src="./haki-stack.svg?v=2" alt="Haki Arsenal — 15 Weapons Mastered" width="100%"/>
+
+<br/><br/>
+
+<!-- 🪪 GRAND LINE FLEET ID + PRODUCTION DASHBOARD -->
+<img src="./bounty-id.svg?v=2" alt="Straw Hat Fleet Captain ID and Grand Line Dashboard" width="100%"/>
+
+<br/><br/>
 
 </div>
 
----
+## 🏴‍☠️ S-Rank Voyages & Production Systems
 
-## 🌟 About Me
-
-> _"Half wizard, half architect — engineering scalable systems that make an impact."_
-
-I'm **Bintang (Zeon)** — a **Full Stack Software Engineer** with **3+ years of experience** turning complex business requirements into high-performance web applications. Currently building and scaling enterprise systems at **PT Tako Anugerah Koporasi**, I bridge interactive modern frontends with rock-solid relational backends.
-
-- 🏢 **Enterprise Software Engineering:** Architecting internal and commercial platforms at **Tako Anugerah Koporasi**
-- ⚛️ **Modern Frontend Mastery:** Crafting responsive, type-safe interfaces with **React, Next.js, TypeScript, Vue.js, & TailwindCSS**
-- 💻 **Backend & Database Wizardry:** High-throughput APIs and complex data modeling using **Laravel, PHP, Node.js, PostgreSQL, & MySQL**
-- 🧠 **AI-Augmented Engineering:** Integrating LLM workflows and automation pipelines to ship cleaner code faster
-
----
-
-## 🛠️ Tech Arsenal
-
-<div align="center">
-
-### **Languages & Core**
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-
-### **Frontend & UI**
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js-42B883?style=for-the-badge&logo=vuedotjs&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-### **Backend, Database & DevOps**
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitLab CI/CD](https://img.shields.io/badge/GitLab_CI/CD-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
-
-</div>
-
----
-
-## 🚀 Featured Work & Highlights
-
-<table align="center" width="100%">
+<table>
+<tr><th>Voyage / System</th><th>What it is</th><th>Haki &amp; Arsenal Used</th><th align="center">Impact / Scale</th></tr>
 <tr>
-<td width="50%" valign="top">
-
-### 🏢 Enterprise Applications & Internal Ecosystems
-Developing and maintaining mission-critical enterprise web applications, workflow automation, and data management systems across private repositories at **PT Tako Anugerah Koporasi**.
-
-**Tech Stack:** `React` · `TypeScript` · `Laravel` · `PostgreSQL` · `Docker`
-
-</td>
-<td width="50%" valign="top">
-
-### ⚡ Automated Trading & Data Pipelines
-High-reliability backend execution engines and real-time market data crawlers utilizing asynchronous queue workers, webhook listeners, and REST/WebSocket API integrations.
-
-**Tech Stack:** `Laravel` · `PHP` · `PostgreSQL` · `MySQL` · `REST API`
-
-</td>
+  <td><a href="https://porto-web.zeondev.site"><b>Customer-PPJK — Logistics, Customs &amp; Financial Portal</b></a><br/><sub>PT Tako Anugerah Koporasi (2026)</sub></td>
+  <td>Paperless export-import &amp; PPJK customs portal unifying trucking dispatch, Indonesia's Customs API (<b>CEISA</b>) declarations, billing &amp; live shipment tracking, backed by automated PHPUnit/JS test suites.</td>
+  <td><code>PHP 8</code> <code>Laravel</code> <code>JavaScript</code> <code>Docker</code> <code>PostHog</code></td>
+  <td align="center"><b>84 Events</b><br/><sub>CEISA Live</sub></td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-
-### 🍽️ [Catering Web Platform](https://github.com/zeondev19/Capstone_Project_C624-PS056)
-Full-stack online catering management system with dynamic menu personalization, real-time order tracking, and automated invoicing.
-
-**Tech Stack:** `Laravel` · `Vue.js` · `TailwindCSS` · `MySQL`
-
-</td>
-<td width="50%" valign="top">
-
-### 🌐 Custom Full-Stack Web Solutions
-End-to-end web development for commercial clients and organizations—delivering fast, SEO-optimized, and responsive digital catalogs and management dashboards.
-
-**Tech Stack:** `Next.js` · `React` · `TypeScript` · `TailwindCSS`
-
-</td>
+  <td><a href="https://porto-web.zeondev.site"><b>Crypto Trading &amp; Signal Execution System</b></a><br/><sub>Automated Quant Pipeline (2025 – 2026)</sub></td>
+  <td>Live 1-year algorithmic trading platform unifying <b>Binance &amp; Bybit</b> wallets under a single TradingView dashboard for BTC/ETH; paired Python QuantConnect scripts (technical + social-sentiment APIs) with Telegram order execution.</td>
+  <td><code>Python</code> <code>QuantConnect</code> <code>Laravel</code> <code>TradingView</code> <code>Telegram API</code></td>
+  <td align="center"><b>24/7 Live</b><br/><sub>BTC / ETH</sub></td>
+</tr>
+<tr>
+  <td><a href="https://porto-web.zeondev.site"><b>Kaikei — Multi-Tenant POS &amp; Accounting SaaS</b></a><br/><sub>MSME Cloud &amp; Offline-First SaaS (2026)</sub></td>
+  <td>Affordable POS, inventory &amp; cashflow SaaS built from scratch after interviewing local MSME owners (~80% shared stock/cashflow bottlenecks); engineered offline <b>IndexedDB</b> sync queues and 3-database yearly partitioning.</td>
+  <td><code>Next.js</code> <code>React</code> <code>TypeScript</code> <code>Laravel</code> <code>Dexie.js</code></td>
+  <td align="center"><b>3-DB Sync</b><br/><sub>Offline-First</sub></td>
+</tr>
+<tr>
+  <td><a href="https://porto-web.zeondev.site"><b>Enterprise ERP, CRM, Queue &amp; Employee Systems</b></a><br/><sub>PT Imagine Space Tech (2024 – 2025)</sub></td>
+  <td>Developed &amp; maintained core production platforms across <b>20+ client projects</b>; completed <b>345+ medium-to-high complexity engineering tasks</b> &amp; SQL query optimizations.</td>
+  <td><code>Laravel</code> <code>PHP 8</code> <code>MySQL</code> <code>PostgreSQL</code> <code>REST API</code></td>
+  <td align="center"><b>50+ Orgs</b><br/><sub>345+ Tasks</sub></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/zeondev19"><b>Batik Pattern Defect Computer Vision Inspector</b></a><br/><sub>Gemastik 2023 National Finalist</sub></td>
+  <td>Camera-based computer vision inspection tool detecting batik pattern defects, color deviations, and size accuracy — <b>Top 21 of 335 Teams Nationally</b> (+ Kemendikbud PKM Grant Team Leader for UAV Fixed-Wing Drone reforestation).</td>
+  <td><code>Python</code> <code>Computer Vision</code> <code>OpenCV</code> <code>AI Inspection</code></td>
+  <td align="center"><b>Top 21</b><br/><sub>National</sub></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/zeondev19/Capstone_Project_C624-PS056"><b>Catering Web Management Platform</b></a><br/><sub>Full-Stack Capstone Project</sub></td>
+  <td>End-to-end online catering management system with dynamic menu personalization, real-time order tracking, and automated invoicing.</td>
+  <td><code>Laravel</code> <code>Vue.js</code> <code>TailwindCSS</code> <code>MySQL</code></td>
+  <td align="center">⚓<br/><sub>Public Repo</sub></td>
 </tr>
 </table>
 
----
-
-## 📊 GitHub & Multi-Platform Activity
-
-> 💡 **Note:** My daily production commits are actively split across **GitHub**, **[GitLab Personal](https://gitlab.com/zeondev19)**, and **Tako Anugerah Koporasi's Private Enterprise GitLab**.
-
 <div align="center">
 
-![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=zeondev19&theme=tokyonight)
+<a href="https://github.com/zeondev19?tab=repositories"><b>→ Explore all 24+ public repositories on GitHub</b></a> &nbsp;·&nbsp; <a href="https://gitlab.com/zeondev19"><b>GitLab Personal</b></a> &nbsp;·&nbsp; <a href="https://porto-web.zeondev.site"><b>porto-web.zeondev.site</b></a>
 
-![Top Langs](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=zeondev19&theme=tokyonight)
-![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=zeondev19&theme=tokyonight)
+<br/><br/>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=zeondev19&theme=tokyonight&hide_border=true)
+### 🌃 My Grand Line Contribution City
+
+*Every commit across GitHub &amp; synced GitLab pipelines raises another tower — rebuilt automatically every day.*
+
+<img src="./profile-3d-contrib/profile-night-view.svg" alt="3D contribution city" width="100%"/>
+
+<br/>
+
+<details>
+<summary><b>📊 View Synced GitLab Enterprise &amp; Multi-Platform Commit Graph</b></summary>
+<br/>
+<p><i>My daily production commits are actively split across <b>GitHub</b>, <b>GitLab Personal</b>, and <b>PT Tako Anugerah Koporasi's Enterprise Pipelines</b>:</i></p>
+<img src="./gitlab-commit-graph.png" alt="GitLab Commit Graph" width="90%"/>
+</details>
+
+<br/><br/>
+
+<!-- 💌 JOIN THE GRAND FLEET -->
+<img src="./connect.svg?v=2" alt="Join the Grand Fleet — Let's connect" width="100%"/>
+
+<br/><br/>
+
+<a href="https://porto-web.zeondev.site"><img src="https://img.shields.io/badge/Portfolio-ffb52e?style=for-the-badge&logo=googlechrome&logoColor=0b0d13" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/tengku-bintang-zaky-irmaysa/"><img src="https://img.shields.io/badge/LinkedIn-4aa8ff?style=for-the-badge&logo=linkedin&logoColor=0b0d13" alt="LinkedIn"/></a>
+<a href="https://github.com/zeondev19"><img src="https://img.shields.io/badge/GitHub-2fd48a?style=for-the-badge&logo=github&logoColor=0b0d13" alt="GitHub"/></a>
+<a href="https://gitlab.com/zeondev19"><img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=0b0d13" alt="GitLab"/></a>
+<a href="mailto:zeondev19@gmail.com"><img src="https://img.shields.io/badge/Email-e2383f?style=for-the-badge&logo=gmail&logoColor=0b0d13" alt="Email"/></a>
+
+<br/><br/>
+
+<img src="https://komarev.com/ghpvc/?username=zeondev19&color=ffb52e&style=for-the-badge&label=GRAND+LINE+VISITORS" alt="Profile views"/>
+
+<br/><br/>
+
+**Kaizoku Ou ni, Ore wa Naru! — Code is a game, and I engineer to win.** ⚡🏴‍☠️
 
 </div>
-
----
-
-```typescript
-const zeon = {
-  name: "Tengku Bintang Zaky Irmaysa",
-  role: "Full Stack Software Engineer",
-  company: "PT Tako Anugerah Koporasi",
-  stack: ["TypeScript", "React", "Next.js", "Laravel", "Node.js", "PostgreSQL"],
-  motto: "Code is a game, and I engineer to win. ⚡"
-};
